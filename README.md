@@ -1,0 +1,1 @@
+# cordova-template-ngx-onsenui
