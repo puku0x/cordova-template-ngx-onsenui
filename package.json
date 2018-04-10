@@ -1,0 +1,20 @@
+{
+  "name": "cordova-template-ngx-onsenui",
+  "version": "0.0.1",
+  "description": "A reference for creating cordova app templates.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/puku0x/cordova-template-ngx-onsenui.git"
+  },
+  "homepage": "https://github.com/puku0x/cordova-template-ngx-onsenui",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova:template"
+  ],
+  "author": "puku0x",
+  "license": "Apache-2.0"
+}
