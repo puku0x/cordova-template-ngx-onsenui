@@ -30,8 +30,7 @@ This template uses:
 
 ## Requirements
 * **Node.js:** _6.x_ or higher
-* **Cordova:** _7.x_
-* **Angular CLI:** _1.7.x_
+* **Cordova:** _7.x_ or higher
 
 ---
 
@@ -53,10 +52,10 @@ You can use cordova or phonegap commands.
 Example usage:
 ```
 $ npm install
-$ ng serve
+$ npm start
 ```
 ```
-$ ng build --prod
+$ npm run build
 $ cordova platform add android
 $ cordova run android
 $ cordova platform add ios

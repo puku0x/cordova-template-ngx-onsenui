@@ -1,0 +1,8 @@
+<ons-toolbar>
+  <div class="center">{{title}}</div>
+</ons-toolbar>
+<ons-tabbar position="auto" swipeable (postchange)="onPostchange($event)">
+  <ons-tab [attr.label]="tabs[0].label" [attr.icon]="tabs[0].icon" [page]="tabs[0].page" active></ons-tab>
+  <ons-tab [attr.label]="tabs[1].label" [attr.icon]="tabs[1].icon" [page]="tabs[1].page"></ons-tab>
+  <ons-tab [attr.label]="tabs[2].label" [attr.icon]="tabs[2].icon" [page]="tabs[2].page"></ons-tab>
+</ons-tabbar>
