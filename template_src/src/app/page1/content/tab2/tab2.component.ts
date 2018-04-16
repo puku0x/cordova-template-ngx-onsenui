@@ -1,17 +1,23 @@
 import { Component, OnInit } from '@angular/core';
 import { OnsNavigator } from 'ngx-onsenui';
 
-import { Page2Component } from '../../page2/page2.component';
+import { Page2Component } from '@app/page2/page2.component';
 
 @Component({
-  selector: 'ons-page[tab3]',
-  templateUrl: './tab3.component.html',
-  styleUrls: ['./tab3.component.scss']
+  selector: 'ons-page[tab2]',
+  templateUrl: './tab2.component.html',
+  styleUrls: ['./tab2.component.scss']
 })
-export class Tab3Component implements OnInit {
+export class Tab2Component implements OnInit {
 
+  /**
+   * Constructor
+   */
   constructor(private navi: OnsNavigator) { }
 
+  /**
+   * Initialize
+   */
   ngOnInit() {
   }
 

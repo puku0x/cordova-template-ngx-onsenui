@@ -9,12 +9,11 @@ if (environment.production) {
   enableProdMode();
 }
 
+if (onsPlatform.isIPhoneX()) {
+  const html = document.documentElement;
+  html.setAttribute('onsflag-iphonex-portrait', '');
+  html.setAttribute('onsflag-iphonex-landscape', '');
+}
+
 platformBrowserDynamic().bootstrapModule(AppModule)
-  .then(() => {
-    const html = document.documentElement;
-    if (onsPlatform.isIPhoneX()) {
-      html.setAttribute('onsflag-iphonex-portrait', '');
-      html.setAttribute('onsflag-iphonex-landscape', '');
-    }
-  })
   .catch(err => console.log(err));

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { OnsNavigator } from 'ngx-onsenui';
 
-import { Page2Component } from '../../page2/page2.component';
+import { Page2Component } from '@app/page2/page2.component';
 
 @Component({
   selector: 'ons-page[tab1]',
@@ -10,8 +10,14 @@ import { Page2Component } from '../../page2/page2.component';
 })
 export class Tab1Component implements OnInit {
 
+  /**
+   * Constructor
+   */
   constructor(private navi: OnsNavigator) { }
 
+  /**
+   * Initialize
+   */
   ngOnInit() {
   }
 

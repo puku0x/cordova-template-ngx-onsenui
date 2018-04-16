@@ -1,0 +1,12 @@
+<ons-toolbar>
+  <div class="left">
+    <ons-toolbar-button (click)="openMenu()">
+      <ons-icon icon="ion-navicon, material:md-menu"></ons-icon>
+    </ons-toolbar-button>
+  </div>
+  <div class="center">{{title}}</div>
+</ons-toolbar>
+<ons-tabbar position="auto" swipeable (prechange)="onPrechange($event)">
+  <ons-tab [attr.label]="tabs[0].label" [attr.icon]="tabs[0].icon" [page]="tabs[0].page" active></ons-tab>
+  <ons-tab [attr.label]="tabs[1].label" [attr.icon]="tabs[1].icon" [page]="tabs[1].page"></ons-tab>
+</ons-tabbar>

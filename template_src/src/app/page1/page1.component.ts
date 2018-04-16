@@ -1,45 +1,44 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, EventEmitter, OnInit, OnDestroy } from '@angular/core';
+import { takeUntil } from 'rxjs/operators';
 
-import { Tab1Component } from './tab1/tab1.component';
-import { Tab2Component } from './tab2/tab2.component';
-import { Tab3Component } from './tab3/tab3.component';
+import { MenuService } from '@app/core/services';
+import { SideComponent } from '@app/page1/side/side.component';
+import { ContentComponent } from '@app/page1/content/content.component';
 
 @Component({
   selector: 'ons-page[page1]',
   templateUrl: './page1.component.html',
   styleUrls: ['./page1.component.scss']
 })
-export class Page1Component implements OnInit {
-  // Tabs
-  tabs = [{
-    label: 'Tab 1',
-    icon: 'ion-home',
-    page: Tab1Component,
-  }, {
-    label: 'Tab 2',
-    icon: 'ion-ios-browsers',
-    page: Tab2Component,
-  }, {
-    label: 'Tab 3',
-    icon: 'ion-ios-search',
-    page: Tab3Component,
-  }];
+export class Page1Component implements OnInit, OnDestroy {
+  private readonly onDestroy$ = new EventEmitter();
 
-  // Title
-  title = this.tabs[0].label;
+  side = SideComponent;
+  content = ContentComponent;
 
-  constructor() { }
+  @ViewChild('splitter') splitter;
 
+  /**
+   * Constructor
+   */
+  constructor(private menuService: MenuService) { }
+
+  /**
+   * Initialize
+   */
   ngOnInit() {
+    this.menuService.open$
+      .pipe(takeUntil(this.onDestroy$))
+      .subscribe(state => {
+        this.splitter.nativeElement.side.open();
+      });
   }
 
   /**
-   * Callback for postchange
-   * @param event
+   * Finalize
    */
-  onPostchange(event) {
-    const index = event.activeIndex;
-    this.title = this.tabs[index].label;
+  ngOnDestroy() {
+    this.onDestroy$.next();
   }
 
 }

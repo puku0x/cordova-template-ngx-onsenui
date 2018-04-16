@@ -8,8 +8,14 @@ import { OnsNavigator } from 'ngx-onsenui';
 })
 export class Page2Component implements OnInit {
 
+  /**
+   * Constructor
+   */
   constructor(private navi: OnsNavigator) { }
 
+  /**
+   * Initialize
+   */
   ngOnInit() {
   }
 
