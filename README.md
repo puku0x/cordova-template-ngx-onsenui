@@ -55,6 +55,7 @@ $ npm install
 $ npm start
 ```
 ```
+$ npm run build
 $ cordova platform add android
 $ cordova run android
 $ cordova platform add ios
