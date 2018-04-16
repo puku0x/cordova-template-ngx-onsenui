@@ -3,6 +3,7 @@
 # compiled output
 /plugins
 /platforms
+/www
 /dist
 /dist-server
 /tmp
