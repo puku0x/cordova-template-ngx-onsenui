@@ -18,6 +18,7 @@
 # under the License.
 #
 -->
+[![npm version](https://badge.fury.io/js/cordova-template-ngx-onsenui.svg)](https://badge.fury.io/js/cordova-template-ngx-onsenui)
 
 # cordova-template-ngx-onsenui
 

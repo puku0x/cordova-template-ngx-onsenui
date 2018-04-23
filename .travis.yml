@@ -1,0 +1,37 @@
+sudo: false
+
+language: node_js
+
+node_js:
+  - "8"
+
+dist: trusty
+
+cache:
+  directories:
+    - node_modules
+
+install:
+  - npm i -g @angular/cli
+  - npm i -g cordova
+
+script:
+  - cordova create new-app --template=./template_src
+  - cd new-app
+  - npm install
+  - npm run build
+  - cordova platform add ios
+  - cordova platform add android
+
+after_success:
+  - 
+
+before_deploy:
+  - npm run build
+
+deploy:
+  provider: npm
+  email: $NPM_EMAIL
+  api_key: $NPM_TOKEN
+  on:
+    tags: true
