@@ -18,7 +18,8 @@
 # under the License.
 #
 -->
-[![npm version](https://badge.fury.io/js/cordova-template-ngx-onsenui.svg)](https://badge.fury.io/js/cordova-template-ngx-onsenui)
+[![build][travis-ci-image]][travis-ci-url]
+[![npm version][npm-image]][npm-url]
 
 # cordova-template-ngx-onsenui
 
@@ -62,3 +63,9 @@ $ cordova run android
 $ cordova platform add ios
 $ cordova run ios
 ```
+
+
+[travis-ci-url]: http://travis-ci.org/puku0x/ngrx-todo
+[travis-ci-image]: https://travis-ci.org/puku0x/ngrx-todo.svg?branch=master
+[npm-url]: https://badge.fury.io/js/cordova-template-ngx-onsenui
+[npm-image]: https://badge.fury.io/js/cordova-template-ngx-onsenui.svg

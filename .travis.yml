@@ -19,6 +19,15 @@ script:
   - cd template_src
   - npm install
   - npm run build
+  - cd ..
+  - cordova create new-app --template=./template_src
+  - cd new-app
+  - cordova platform add android
+  - cordova platform add ios
+
+after_scrpt:
+  - cd ~
+  - rm -f -R ./new-app
 
 deploy:
   provider: npm
