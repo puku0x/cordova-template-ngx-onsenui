@@ -12,16 +12,13 @@ cache:
     - node_modules
 
 install:
-  - npm i -g @angular/cli
+  - npm i -g @angular/cli@next
   - npm i -g cordova
 
 script:
-  - cordova create new-app --template=./template_src
-  - cd new-app
+  - cd template_src
   - npm install
   - npm run build
-  - cordova platform add ios
-  - cordova platform add android
 
 deploy:
   provider: npm
