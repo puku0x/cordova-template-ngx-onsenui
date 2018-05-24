@@ -12,7 +12,7 @@ cache:
     - node_modules
 
 install:
-  - npm i -g @angular/cli@next
+  - npm i -g @angular/cli
   - npm i -g cordova
 
 script:

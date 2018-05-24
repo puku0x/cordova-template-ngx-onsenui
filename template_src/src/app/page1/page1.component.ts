@@ -1,9 +1,9 @@
 import { Component, ViewChild, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { takeUntil } from 'rxjs/operators';
 
-import { MenuService } from '@app/core/services';
-import { SideComponent } from '@app/page1/side/side.component';
-import { ContentComponent } from '@app/page1/content/content.component';
+import { MenuService } from '../core/services';
+import { SideComponent } from './side/side.component';
+import { ContentComponent } from './content/content.component';
 
 @Component({
   selector: 'ons-page[page1]',

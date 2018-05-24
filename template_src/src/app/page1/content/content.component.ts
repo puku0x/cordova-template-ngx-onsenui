@@ -1,8 +1,8 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 
-import { MenuService } from '@app/core/services';
-import { Tab1Component } from '@app/page1/content/tab1/tab1.component';
-import { Tab2Component } from '@app/page1/content/tab2/tab2.component';
+import { MenuService } from '../../core/services';
+import { Tab1Component } from './tab1/tab1.component';
+import { Tab2Component } from './tab2/tab2.component';
 
 @Component({
   selector: 'ons-page[content]',
