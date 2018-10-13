@@ -24,9 +24,7 @@ script:
   - cd new-app
   - cordova platform add android
   - cordova platform add ios
-
-after_script:
-  - cd ~
+  - cd ..
   - rm -f -R ./new-app
 
 deploy:
