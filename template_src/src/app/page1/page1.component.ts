@@ -1,7 +1,7 @@
 import { Component, ViewChild, EventEmitter, OnInit, OnDestroy } from '@angular/core';
 import { takeUntil } from 'rxjs/operators';
 
-import { MenuService } from '../core/services';
+import { MenuService } from '../services';
 import { SideComponent } from './side/side.component';
 import { ContentComponent } from './content/content.component';
 
@@ -38,7 +38,7 @@ export class Page1Component implements OnInit, OnDestroy {
    * Finalize
    */
   ngOnDestroy() {
-    this.onDestroy$.next();
+    this.onDestroy$.emit();
   }
 
 }

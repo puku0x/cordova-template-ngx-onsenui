@@ -1,6 +1,6 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 
-import { MenuService } from '../../core/services';
+import { MenuService } from '../../services';
 import { Tab1Component } from './tab1/tab1.component';
 import { Tab2Component } from './tab2/tab2.component';
 
