@@ -5,19 +5,26 @@ import { Observable, Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class MenuService {
-  subject = new Subject();
+  subject = new Subject<boolean>();
 
   /**
    * Get menu state
    */
-  get open$(): Observable<any> {
+  get menu$(): Observable<boolean> {
     return this.subject.asObservable();
   }
 
   /**
-   * Toggle menu
+   * Open menu
    */
   open() {
-    this.subject.next();
+    this.subject.next(true);
+  }
+
+  /**
+   * Close menu
+   */
+  close() {
+    this.subject.next(false);
   }
 }

@@ -27,11 +27,15 @@ export class Page1Component implements OnInit, OnDestroy {
    * Initialize
    */
   ngOnInit() {
-    this.menuService.open$
-      .pipe(takeUntil(this.onDestroy$))
-      .subscribe(state => {
+    this.menuService.menu$.pipe(
+      takeUntil(this.onDestroy$)
+    ).subscribe(state => {
+      if (state) {
         this.splitter.nativeElement.side.open();
-      });
+      } else {
+        this.splitter.nativeElement.side.close();
+      }
+    });
   }
 
   /**

@@ -22,7 +22,7 @@ export class Page2Component implements OnInit {
   /**
    * Pop page
    */
-  pop() {
+  popPage() {
     this.navi.nativeElement.popPage();
   }
 

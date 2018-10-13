@@ -24,7 +24,7 @@ export class Tab1Component implements OnInit {
   /**
    * Push page
    */
-  push() {
+  pushPage() {
     this.navi.nativeElement.pushPage(Page2Component);
   }
 
