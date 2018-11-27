@@ -31,7 +31,7 @@ This template uses:
 * [Cordova](https://cordova.apache.org/)
 
 ## Requirements
-* **Node.js:** _8.x_ or higher
+* **Node.js:** _10.x_ or higher
 * **Cordova:** _8.x_ or higher
 
 ---
