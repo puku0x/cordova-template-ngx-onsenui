@@ -4,7 +4,7 @@ import { OnsNavigator } from 'ngx-onsenui';
 @Component({
   selector: 'ons-page[page2]',
   templateUrl: './page2.component.html',
-  styleUrls: ['./page2.component.scss']
+  styleUrls: ['./page2.component.css']
 })
 export class Page2Component implements OnInit {
 

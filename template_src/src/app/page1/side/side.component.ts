@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 
-import { MenuService } from '@app/services';
+import { MenuService } from '../../services';
 
 @Component({
   selector: 'ons-page[side]',
   templateUrl: './side.component.html',
-  styleUrls: ['./side.component.scss']
+  styleUrls: ['./side.component.css']
 })
 export class SideComponent implements OnInit {
 

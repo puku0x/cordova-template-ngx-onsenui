@@ -1,23 +1,23 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 
-import { MenuService } from '@app/services';
+import { MenuService } from '../../services';
 import { Tab1Component } from './tab1/tab1.component';
 import { Tab2Component } from './tab2/tab2.component';
 
 @Component({
   selector: 'ons-page[content]',
   templateUrl: './content.component.html',
-  styleUrls: ['./content.component.scss']
+  styleUrls: ['./content.component.css']
 })
 export class ContentComponent implements OnInit {
   // Tabs
   tabs = [{
     label: 'Tab 1',
-    icon: 'ion-home',
+    icon: 'ion-ios-home',
     page: Tab1Component,
   }, {
     label: 'Tab 2',
-    icon: 'ion-gear-a',
+    icon: 'ion-ios-settings',
     page: Tab2Component,
   }];
 

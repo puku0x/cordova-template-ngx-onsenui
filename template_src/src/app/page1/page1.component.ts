@@ -8,7 +8,7 @@ import { ContentComponent } from './content/content.component';
 @Component({
   selector: 'ons-page[page1]',
   templateUrl: './page1.component.html',
-  styleUrls: ['./page1.component.scss']
+  styleUrls: ['./page1.component.css']
 })
 export class Page1Component implements OnInit, OnDestroy {
   private readonly onDestroy$ = new EventEmitter();
@@ -16,7 +16,7 @@ export class Page1Component implements OnInit, OnDestroy {
   side = SideComponent;
   content = ContentComponent;
 
-  @ViewChild('splitter') splitter;
+  @ViewChild('splitter', { static: false }) splitter;
 
   /**
    * Constructor
